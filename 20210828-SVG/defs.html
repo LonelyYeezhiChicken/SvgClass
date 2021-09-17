@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>defs</title>
+    <style>
+        .svg{
+            display: none;
+        }
+          .icon {
+            width: 200px;
+            height: 200px;
+        }
+        .circle1{
+            fill: aqua;
+        }
+    </style>
+</head>
+
+<body>
+    <svg class="svg">
+        <defs>
+            <rect id="rect" x="0" y="0" width="200" height="200"></rect>
+            <g id="shape">
+                <rect id="rect" x="0" y="0" width="200" height="200"></rect>
+                <circle class="circle1" cx="60" cy="60" r="20" />
+                <circle class="circle1" cx="140" cy="60" r="20" />
+                <circle class="circle1" cx="100" cy="100" r="40" />
+                <circle class="circle2" cx="85" cy="85" r="2" />
+                <circle class="circle2" cx="110" cy="85" r="2" />
+                <circle class="circle2" cx="100" cy="100" r="5" />
+            </g>
+        </defs>
+    </svg>
+    <svg class="icon">
+        <use xlink:href="#rect"></use>
+    </svg>
+    <svg class="">
+        <use xlink:href="#shape"></use>
+    </svg>
+</body>
+
+</html>

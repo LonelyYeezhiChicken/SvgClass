@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVG</title>
+    <style>
+        svg {
+            width: 400px;
+            height: 400px;
+        }
+
+        .rect1 {
+            width: 100px;
+            height: 100px;
+            fill: rgb(255, 238, 0);
+            transition: 0.4s;
+        }
+
+        .rect1:hover {
+            fill: pink;
+        }
+
+        .circle1 {
+            transition: 0.4s;
+            fill: rgba(128, 0, 128, 0.678);
+        }
+
+        .circle1:hover {
+            fill: rgba(244, 165, 96, 0.068);
+        }
+
+        .ellipse1 {
+            fill: seagreen;
+            stroke: blueviolet;
+            stroke-width: 5px;
+        }
+
+        .ellipse1:hover {
+            stroke-width: 50px;
+            stroke-opacity: .2;
+            stroke-linejoin: round;
+        }
+
+        .polygon1 {
+            fill: rgba(181, 255, 255, 0.705);
+            pointer-events: none;
+        }
+
+        .polygon1:hover {
+            fill: rgba(255, 79, 240, 0.8);
+        }
+
+        .box {
+            position: fixed;
+            width: 400px;
+            height: 400px;
+            background-color: darkorchid;
+            left: 50%;
+            right: 50%;
+            transition: translate(-50%, -50%);
+            cursor: pointer;
+            pointer-events: none;
+            opacity: 0;
+        }
+        .box.show{
+            pointer-events: all;
+            opacity: 1;
+        }
+
+        .box:hover {
+            background-color: dimgray;
+        }
+    </style>
+</head>
+
+<body>
+    <svg>
+        <rect class="rect1" x="0" y="0" />
+        <circle class="circle1" cx="100" cy="100" r="40" />
+        <ellipse class="ellipse1" cx="200" cy="200" rx="30" ry="50" />
+        <polygon class="polygon1" points="50, 0 100, 70 230,60 100, 300" />
+    </svg>
+    <button id="show">show</button>
+    <div class="box" id="box"></div>
+    <script>
+        let show = document.querySelector("#show");
+        let box = document.querySelector("#box");
+        show.addEventListener("click",function(){
+            box.classList.add("show");
+        });
+        box.addEventListener("click",function(){
+            box.classList.remove("show");
+        });
+    </script>
+</body>
+
+</html>

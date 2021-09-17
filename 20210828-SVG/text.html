@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>text</title>
+    <style>
+        .icon {
+            width: 1000px;
+        }
+
+        .text {
+            fill: blueviolet;
+            font-size: 50px;
+        }
+
+        .text2 {
+            fill: rgb(214, 195, 231);
+            font-size: 60px;
+            stroke: red;
+            font-family: Arial, Helvetica, sans-serif;
+            stroke-width: 1px;
+            text-anchor: middle;
+        }
+    </style>
+</head>
+
+<body>
+    <svg class="icon">
+        <text class="text" x="20" y="60">Simplest
+            <tspan dy="-10px" style="fill: sandybrown;">
+                Text
+        </text>
+        <text class="text2" x="300" y="120">Simplest Text</text>
+        <text x="500px" y="200px">
+            That's <tspan dx="0 4 -3 5 -4" dy="0 -3 7 3 -7" rotate="5 10 -5 -20 0">Shake</tspan>!!!
+          </text>
+        
+    </svg>
+</body>
+
+</html>
